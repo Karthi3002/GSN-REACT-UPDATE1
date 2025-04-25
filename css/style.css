@@ -1251,7 +1251,6 @@ p {
   position: relative;
   height: 100%;
   min-height: 400px;
-  background: url("/img/joingsn.JPG") center/cover no-repeat; /* replace with your background image */
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
