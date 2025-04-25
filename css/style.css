@@ -126,6 +126,7 @@ hr {
 }
 #menu .navbar-nav > li > a:hover {
   color: #d4af37; 
+  cursor: pointer;
   
 }
 #menu .navbar-nav > li > a:after {
