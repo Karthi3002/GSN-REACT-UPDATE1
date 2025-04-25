@@ -292,7 +292,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left Side: Logo */}
         <div className="footer-logo">
-          <img src="img/logo-1.png" alt="GSN Logo" className="logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/logo-1.png`} alt="GSN Logo" className="logo" />
         </div>
 
         {/* Right Side: Contact Info and Social Media */}

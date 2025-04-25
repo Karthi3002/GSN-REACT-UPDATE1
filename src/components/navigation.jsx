@@ -54,10 +54,13 @@
 
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +80,7 @@ export const Navigation = () => {
   }, []);
 
   const navItems = [
-    { id: "home", label: "Home" },
+    { id: "header", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
     { id: "experience", label: "GSN Experience" },
@@ -91,7 +94,7 @@ export const Navigation = () => {
       <div className="container">
         <div className="navbar-header">
           <a className="navbar-brand page-scroll" href="#page-top">
-            <img src="/img/logo-1.png" alt="GSN Logo" className="gsn-logo" />
+            <img src={`${process.env.PUBLIC_URL}/img/logo-1.png`} alt="GSN Logo" className="gsn-logo" />
           </a>
           <button
             type="button"
@@ -108,20 +111,28 @@ export const Navigation = () => {
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            {navItems.map((item) => (
-              <li key={item.id} className={activeSection === item.id ? "active" : ""}>
-                <ScrollLink
-                  to={item.id}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  offset={-70}
-                  onSetActive={() => setActiveSection(item.id)}
-                >
-                  {item.label}
-                </ScrollLink>
-              </li>
-            ))}
+            {isHome ? (
+              navItems.map((item) => (
+                <li key={item.id} className={activeSection === item.id ? "active" : ""}>
+                  <ScrollLink
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-70}
+                    onSetActive={() => setActiveSection(item.id)}
+                  >
+                    {item.label}
+                  </ScrollLink>
+                </li>
+              ))
+            ) : (
+              navItems.map((item) => (
+                <li key={item.id}>
+                  <Link to="/" state={{ scrollTo: item.id }}>{item.label}</Link>
+                </li>
+              ))
+            )}
           </ul>
         </div>
       </div>

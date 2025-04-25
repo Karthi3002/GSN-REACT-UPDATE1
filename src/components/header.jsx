@@ -6,7 +6,7 @@ export const Header = (props) => {
     <header id="header">
       <div className="video-container">
         <video autoPlay loop muted playsInline>
-          <source src="/img/hero.mp4" type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/img/hero.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="overlay">

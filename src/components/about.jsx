@@ -30,7 +30,7 @@ const About = ({ data }) => {
           {/* Left Column - Image */}
           <div className="about-image">
             <img
-              src="img/about.jpg"
+              src={`${process.env.PUBLIC_URL}/img/about.jpg`}
               alt="About GSN"
               className={isVisible ? "show" : ""}
             />

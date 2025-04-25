@@ -17,7 +17,7 @@ const WhyGsn = () => {
           </ul>
         </div>
         <div className="why-gsn-image">
-          <img src="img/whygsnimg.png" alt="Thinking woman" />
+          <img src={`${process.env.PUBLIC_URL}/img/whygsnimg.png`} alt="Thinking woman" />
         </div>
       </div>
     </section>
