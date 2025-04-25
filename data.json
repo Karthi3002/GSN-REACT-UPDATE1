@@ -1,0 +1,82 @@
+{
+  "Header": {
+    "title": "Global Success Network-Networking Reimagined for the Future",
+    "paragraph": "Step into the future of networking where smarter tools and stronger bonds leave old-school handshakes behind. GS’s unique system guides you from visitor to victor, unlocking business wins, real relationships, and a path to success that’s ahead of the curve. From GSN Vikshan in Chennai to the world, we're leading the charge."
+  },
+
+  
+    "benefits": [
+      {
+        "title": "Enhanced Visibility",
+        "description": "Increase your brand recognition with a strategic online presence.",
+        "icon": "🌟"
+      },
+      {
+        "title": "Business Growth",
+        "description": "Drive customer engagement and boost sales with effective marketing.",
+        "icon": "📈"
+      },
+      {
+        "title": "Customer Trust",
+        "description": "Build strong customer relationships with a reliable and transparent brand image.",
+        "icon": "🤝"
+      }
+    ],
+  
+   
+    "About": {
+      "paragraph": "Global Success Network (GSN) is redefining the future of networking with a bold, tech-driven approach. We’re a dynamic community of entrepreneurs committed to growing our businesses, building authentic relationships, and evolving personally—together.",
+      "vision": "To ignite a global movement of entrepreneurs empowered by smarter tools and deeper connections—reshaping the future of success.",
+      "mission": "To equip you with a transformative network that converts connections into meaningful growth—offering referrals, authentic relationships, and recognition through a truly distinctive approach."
+    },
+
+    "blogs": [
+    {
+      "id": "1",
+      "title": "Don't miss a single match this season.",
+      "author": "Mithcal",
+      "date": "1h ago",
+      "excerpt": "Whether it's an away game or tournament...",
+      "image": "/img/blog1.jpg",
+      "slug": "match-season",
+      "content": "Full blog content goes here..."
+    },
+    {
+      "id": "2",
+      "title": "Don't miss a single match this season.",
+      "author": "Mithcal",
+      "date": "1h ago",
+      "excerpt": "Whether it's an away game or tournament...",
+      "image": "/img/blog1.jpg",
+      "slug": "match-season",
+      "content": "Full blog content goes here..."
+    }
+  ],
+ 
+  "Services": [
+    {
+      "icon": "fa fa-building",
+      "name": "Business Networking Events",
+      "text": "Connect with like-minded professionals in exclusive networking events.."
+    },
+    {
+      "icon": "fa fa-exchange-alt",
+      "name": "Referral Programs",
+      "text": "Generate high-quality business leads through strategic networking"
+    },
+    {
+      "icon": "fa fa-chart-line",
+      "name": "Mentorship & Growth",
+      "text": "Learn from industry leaders and business experts."
+    },
+    {
+      "icon": "fa fa-globe",
+      "name": "Online Business Community",
+      "text": "Collaborate and share insights with a global network of professionals."
+    }
+    
+  ]
+ 
+
+   
+}
