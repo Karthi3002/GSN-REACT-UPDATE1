@@ -752,7 +752,7 @@ const JoinGSN = () => {
         {/* Left animated info section */}
         <div className="animated-info-box"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/img/image.png)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/joingsn.JPG)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
