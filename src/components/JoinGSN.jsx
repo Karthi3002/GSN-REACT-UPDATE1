@@ -750,7 +750,14 @@ const JoinGSN = () => {
 
       <div className="join-grid">
         {/* Left animated info section */}
-        <div className="animated-info-box">
+        <div className="animated-info-box"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/image.png)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <div className="overlay-card">
             <h3>{infoSlides[currentSlide].title}</h3>
             <ul>

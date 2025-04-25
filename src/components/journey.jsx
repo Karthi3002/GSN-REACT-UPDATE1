@@ -67,31 +67,31 @@ const journeyData = [
   {
     week: "Week 1:",
     text: "Orientation & first 1-to-1s begin",
-    image: "/img/journey/j1.png",
+    image: `${process.env.PUBLIC_URL}/img/journey/j1.png`,
     side: "left",
   },
   {
     week: "Week 2–6:",
     text: "Meet 2 members each week, build connections",
-    image: "/img/journey/j2.png",
+    image: `${process.env.PUBLIC_URL}/img/journey/j2.png`,
     side: "right",
   },
   {
     week: "",
     text: "Discover how to present yourself clearly, speak powerfully, and attract aligned referrals",
-    image: "/img/journey/j3.png",
+    image: `${process.env.PUBLIC_URL}/img/journey/j3.png`,
     side: "left",
   },
   {
     week: "",
     text: "Learn the GSN culture of abundance, gratitude, and disciplined growth",
-    image: "/img/journey/j4.png",
+    image: `${process.env.PUBLIC_URL}/img/journey/j4.png`,
     side: "right",
   },
   {
     week: "Week 7:",
     text: "Step into full-speed, smart networking with AI insights",
-    image: "/img/journey/j5.png",
+    image: `${process.env.PUBLIC_URL}/img/journey/j5.png`,
     side: "left",
   },
 ];
