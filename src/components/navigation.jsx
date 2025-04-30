@@ -59,6 +59,7 @@ import { Link, useLocation } from "react-router-dom";
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -79,6 +80,15 @@ export const Navigation = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleNavClick = (id) => {
+    setActiveSection(id);
+    setMenuOpen(false); // Close menu on click
+  };
+
   const navItems = [
     { id: "header", label: "Home" },
     { id: "about", label: "About" },
@@ -97,19 +107,17 @@ export const Navigation = () => {
             <img src={`${process.env.PUBLIC_URL}/img/logo-1.png`} alt="GSN Logo" className="gsn-logo" />
           </a>
           <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            <span className="sr-only">Toggle navigation</span>
+  className={`navbar-toggle ${menuOpen ? "hidden" : ""}`}
+  onClick={toggleMenu}
+>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
         </div>
 
-        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div className={`navbar-collapse ${menuOpen ? "open" : ""}`} id="bs-example-navbar-collapse-1">
+          <span className="menu-close" onClick={toggleMenu}>&times;</span>
           <ul className="nav navbar-nav navbar-right">
             {isHome ? (
               navItems.map((item) => (
@@ -120,7 +128,7 @@ export const Navigation = () => {
                     duration={500}
                     spy={true}
                     offset={-70}
-                    onSetActive={() => setActiveSection(item.id)}
+                    onSetActive={() => handleNavClick(item.id)}
                   >
                     {item.label}
                   </ScrollLink>
@@ -129,7 +137,9 @@ export const Navigation = () => {
             ) : (
               navItems.map((item) => (
                 <li key={item.id}>
-                  <Link to="/" state={{ scrollTo: item.id }}>{item.label}</Link>
+                  <Link to="/" state={{ scrollTo: item.id }} onClick={() => setMenuOpen(false)}>
+                    {item.label}
+                  </Link>
                 </li>
               ))
             )}
