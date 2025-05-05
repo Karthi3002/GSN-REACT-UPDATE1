@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GSN-REACT-UPDATE1/static/css/main.7c52af3c.css",
-    "main.js": "/GSN-REACT-UPDATE1/static/js/main.d3ce6eff.js",
+    "main.js": "/GSN-REACT-UPDATE1/static/js/main.bd7dfc9b.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/GSN-REACT-UPDATE1/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/GSN-REACT-UPDATE1/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/GSN-REACT-UPDATE1/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -9,10 +9,10 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/GSN-REACT-UPDATE1/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/GSN-REACT-UPDATE1/index.html",
     "main.7c52af3c.css.map": "/GSN-REACT-UPDATE1/static/css/main.7c52af3c.css.map",
-    "main.d3ce6eff.js.map": "/GSN-REACT-UPDATE1/static/js/main.d3ce6eff.js.map"
+    "main.bd7dfc9b.js.map": "/GSN-REACT-UPDATE1/static/js/main.bd7dfc9b.js.map"
   },
   "entrypoints": [
     "static/css/main.7c52af3c.css",
-    "static/js/main.d3ce6eff.js"
+    "static/js/main.bd7dfc9b.js"
   ]
 }
