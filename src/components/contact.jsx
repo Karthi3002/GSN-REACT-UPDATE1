@@ -284,9 +284,24 @@
 
 //final code 
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const footerLinks = [
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "experience", label: "GSN Experience" },
+    { id: "join gsn", label: "Join GSN" },
+    { id: "blog", label: "Blog" },
+    { id: "contact", label: "Contact" },
+  ];
+
+
   return (
     <footer id="contact" className="footer">
       <div className="footer-container">
@@ -338,12 +353,29 @@ const Footer = () => {
       {/* Bottom Footer: Links and Copyright */}
       <div className="footer-bottom">
         <div className="footer-links">
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
-          <a href="/gsn-experience">GSN Experience</a>
-          <a href="/join-gsn">Join GSN</a>
-          <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
+          {footerLinks.map((link) =>
+            isHome ? (
+              <ScrollLink
+                key={link.id}
+                to={link.id}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="footer-link"
+              >
+                {link.label}
+              </ScrollLink>
+            ) : (
+              <Link
+                key={link.id}
+                to="/"
+                state={{ scrollTo: link.id }}
+                className="footer-link"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
         <div className="footer-copyright">
           Copyright &copy; {new Date().getFullYear()} Global Success Network. All rights reserved.

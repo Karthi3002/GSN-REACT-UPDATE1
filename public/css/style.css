@@ -277,6 +277,41 @@ a:focus,
   display: none !important;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Tablet View */
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .btn-custom {
+    width: 50%; /* Or 100% if full width is desired */
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile View */
+  .header-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-custom {
+    width: 60%; /* More space-friendly for smaller screens */
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+
 /* Responsive Menu Styles */
 @media (max-width: 991px) {
   .navbar-header {
@@ -307,8 +342,16 @@ a:focus,
     display: none;
   }
 
+  .navbar-toggle:hover {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+
   .navbar-collapse {
     position: fixed;
+    padding: 80px 40px 30px 40px; 
+    text-align: left;/* add more left padding */
     top: 0;
     right: -100%;
     width: 100%;
@@ -325,18 +368,27 @@ a:focus,
     border-bottom-left-radius: 20px;
   }
 
+  .navbar-toggle .icon-bar {
+    height: 5px;
+    width: 33px;
+    border-radius: 10px;
+  }
+
   .navbar-collapse.open {
     right: 0;
   }
 
   .navbar-collapse ul.nav {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
-    align-items: flex-start;
+    align-items: flex-start; /* Align links to the left */
+    text-align: left; /* Ensure text is left-aligned */
+    justify-content: flex-start;
   }
 
   .navbar-collapse ul.nav li {
@@ -347,12 +399,15 @@ a:focus,
     color: #fffefe !important;
     font-size: 20px;
     font-weight: 600;
+    padding-left: 0;
     padding: 10px 0;
     width: 100%;
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    text-align: left;
   }
+
 
   .navbar-collapse ul.nav li a:hover {
     color: #d4af37;
@@ -366,9 +421,15 @@ a:focus,
     font-size: 28px;
     color: #ffffff;
     cursor: pointer;
-    z-index: 10000;
+    z-index: 10001;
   }
+
+  .menu-close:hover {
+    color: #d4af37;
+  }
+
 }
+
 
 
 
@@ -1167,7 +1228,7 @@ header .intro-text {
 
 .about-content {
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
@@ -1274,6 +1335,7 @@ header .intro-text {
   }
 
   .about-text p {
+    text-align: justify;
     font-size: 15px;
   }
 
@@ -1302,6 +1364,7 @@ header .intro-text {
   }
 
   .about-text p {
+    text-align: justify;
     font-size: 14px;
   }
 
@@ -1402,7 +1465,7 @@ header .intro-text {
 
 /* ========== Responsive Services Section ========== */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .services-main-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -1440,7 +1503,7 @@ header .intro-text {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .services {
     padding: 50px 15px;
   }
@@ -1455,7 +1518,7 @@ header .intro-text {
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
@@ -3108,7 +3171,7 @@ gsn-form input:focus,
 
 
 .coming-root {
-  min-height: 100vh;
+  min-height: auto;
   width: auto;
   background: #000;
   display: flex;
@@ -3116,7 +3179,8 @@ gsn-form input:focus,
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding-top: 48px;
+  padding-top: 24px;
+  padding-bottom: 40px;
 }
 
 .coming-title {
@@ -3221,77 +3285,84 @@ gsn-form input:focus,
 /* Tablet View (max-width: 1024px) */
 @media (max-width: 1024px) {
   .coming-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 12px; /* reduce spacing */
   }
 
   .coming-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
   }
 
   .eclipse-wrapper {
-    width: 350px;
-    height: 180px;
+    width: 320px;
+    height: 150px;
+    margin-bottom: 24px;
   }
 
   .eclipse-glow,
   .eclipse-half {
-    width: 300px;
-    height: 140px;
-  }
-
-  .coming-soon-script {
-    font-size: 2rem;
-    bottom: 26px;
-    letter-spacing: 0.4em;
-  }
-
-  .coming-desc {
-    font-size: 1.1rem;
-    margin-top: 48px;
-  }
-}
-
-/* Mobile View (max-width: 768px) */
-@media (max-width: 768px) {
-  .coming-root {
-    padding-top: 36px;
-  }
-
-  .coming-title {
-    font-size: 1.3rem;
-    margin-bottom: 14px;
-  }
-
-  .coming-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 28px;
-  }
-
-  .eclipse-wrapper {
-    width: 260px;
-    height: 130px;
-  }
-
-  .eclipse-glow,
-  .eclipse-half {
-    width: 220px;
+    width: 280px;
     height: 120px;
   }
 
   .coming-soon-script {
-    font-size: 1.6rem;
-    bottom: 22px;
-    letter-spacing: 0.3em;
+    font-size: 1.8rem;
+    bottom: 20px;
+    letter-spacing: 0.35em;
   }
 
   .coming-desc {
     font-size: 1rem;
-    padding: 0 16px;
-    margin-top: 40px;
+    margin-top: 32px;
+    line-height: 1.5;
+  }
+}
+
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .coming-root {
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
+
+  .coming-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .coming-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .eclipse-wrapper {
+    width: 220px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .eclipse-glow,
+  .eclipse-half {
+    width: 200px;
+    height: 100px;
+  }
+
+  .coming-soon-script {
+    font-size: 1.4rem;
+    bottom: 16px;
+    letter-spacing: 0.25em;
+  }
+
+  .coming-desc {
+    font-size: 0.95rem;
+    margin-top: 30px;
+    line-height: 1.5;
   }
 
   .coming-bold {
-    font-size: 1em;
+    font-size: 0.98em;
   }
 }
 
@@ -3411,6 +3482,7 @@ gsn-form input:focus,
   display: flex;
 }
 .footer-links a {
+  cursor: pointer;
   color: white;
   text-decoration: none;
   margin-right: 15px;
