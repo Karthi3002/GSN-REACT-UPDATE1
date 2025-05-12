@@ -104,12 +104,11 @@ export const Navigation = () => {
       <div className="container">
         <div className="navbar-header">
           <a className="navbar-brand page-scroll" href="#page-top">
-            <img src={`${process.env.PUBLIC_URL}/img/logo-1.png`} alt="GSN Logo" className="gsn-logo" />
+            <img src={`${process.env.PUBLIC_URL}/img/newlogo.png`} alt="GSN Logo" className="gsn-logo" />
           </a>
           <button
-  className={`navbar-toggle ${menuOpen ? "hidden" : ""}`}
-  onClick={toggleMenu}
->
+            className={`navbar-toggle ${menuOpen ? "hidden" : ""}`}
+            onClick={toggleMenu}>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
